@@ -1,0 +1,617 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+
+
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 90%;
+    /* max-width: 1200px; */
+    margin: auto;
+}
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
+
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+} */
+
+/* Inicio Header*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5.6rem;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px 5%;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+    flex: 1;
+    
+}
+
+.logo {
+    font-size: 2em;
+    color: rgb(59, 57, 167);
+    font-family: "Montserrat", sans-serif;
+    white-space: nowrap;
+}
+
+
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: background-color .3s ease-in;
+}
+
+nav ul li a:hover{
+    background-color: rgb(59, 57, 167);
+    border-bottom: 2px solid black;
+}
+
+
+
+/* Fin header */
+
+p{
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: "Montserrat";
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.contenedor2 {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.imagen_main {
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid black;
+    box-shadow: 0 0 9px #008080; 
+}
+
+#inicio, #contacto {
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+#inicio h1, #inicio p, #inicio div{
+    text-align: center;
+    padding: 10px 0px;
+}
+
+#inicio div a{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #008080;
+    color: white;
+    /* font-size: 20px; */
+}
+
+#inicio div a:hover {
+    background-color: rgb(59, 57, 167);
+    border-bottom: 2px solid black;
+    transition: background-color .2s ease-in;
+}
+
+#inicio div a span {
+    font-size: 20px;
+}
+
+
+#contacto {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#contacto h2, #contacto p {
+    padding: 0.5rem 0.5rem;
+}
+
+#contacto  .article1 {
+    background-color: #00808080;
+    border-radius: 10px;
+    margin-bottom: 3.5rem;
+}
+
+#contacto .article2 {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-bottom: 9rem; */
+    padding-bottom: 10rem;
+    /* animation: squareAnim 2s infinite linear; */
+}
+
+#contacto .article2 a img {
+    flex-wrap: wrap;
+    width:  75px; /*Cambiar tamaÃ±o de iconos como de a*/
+    height: 75px;
+}
+ footer {
+    height: 90px;
+    background-color: #008080;
+    /* padding: 2rem; */
+    padding: 5vh 0;
+ }
+
+ footer p {
+        
+        display: flex;
+        justify-content: center;
+        color: white;
+    
+ }
+
+ #contacto .article2 a img {
+    width: 75px;
+    height: 75px;
+    filter: drop-shadow(0 0 2px #008080); 
+    transition: filter 0.3s ease;
+}
+
+#contacto .article2 a:hover img {
+    filter: invert(40%) sepia(80%) saturate(1000%) hue-rotate(120deg);
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background-color: #008080;
+    border-radius: 1rem;
+
+}
+
+#projects .contenedor3 {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: rgb(59, 57, 167);
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 19px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    padding: .5rem;
+    opacity: 0;
+    background-color: #20b6b6;
+    border-radius: 1rem;
+ }
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in .4s;
+}
+
+#projects h2 {
+    top:0px;
+}
+
+
+/*-------- En pantallas desktop --------*/
+
+@media(min-width: 1200px) {
+    #inicio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem; /* Espacio entre los elementos */
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+        margin-top: -7rem;
+        margin-bottom: -5rem;
+    }
+    .imagen_main {
+        max-width: 300px; /* Ajusta el tamaño de la imagen si es necesario */
+    }
+    #inicio article p {
+        width: 25rem;
+        text-align: justify;
+        font-size: 0.9rem;
+        
+    }
+    #inicio article h1, #inicio article div{
+        text-align: left;
+        
+    }
+    #inicio article h1 {
+        font-size: 48px;
+    }
+    #inicio article div span  {
+        font-size: 0.9rem;
+    }
+
+    #contacto {
+        margin-top: 1rem;
+        margin-bottom: 1px;
+        padding-bottom: 1px;
+        min-height: 85vh;
+    }
+
+    #contacto .article1 {
+        margin-top: 1rem;
+    }
+
+    #contacto .article1 h2 {
+        font-size: 32px;
+    }
+
+    #projects {
+        margin: 2rem;
+    }
+
+    header input {
+        display: none;
+}
+    
+}
+
+@media (max-width: 767px){
+    :root {
+        --primary-color: rgba(13, 110, 139, 0.75);
+        --secondary-color: rgba(229, 148, 0, 0.9);
+        --overlay-color: rgba(24, 39, 51, 0.85);
+        --menu-speed: 0.75s;
+    }
+    .menu-wrap {
+        position: fixed;
+        top: 1rem;
+        right: 0;
+        z-index: 1;
+    }
+    
+    .menu-wrap .toggler {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+    
+    .menu-wrap .hamburger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    
+        width: 60px;
+        height: 60px;
+        padding: 1rem;
+        /* background: var(--primary-color); */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Hamburger line */
+    .menu-wrap .hamburger > div {
+        position: relative;
+        flex: none;
+        width: 100%;
+        height: 2px;
+        background: #008080;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+    }
+    /* Hamburger top-bottom lines */
+    .menu-wrap .hamburger > div:before,
+    .menu-wrap .hamburger > div:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+    }
+    .menu-wrap .hamburger > div:after {
+        top: 10px;
+    }
+    
+    /* Toggler Animation */
+    
+    .menu-wrap .toggler:checked + .hamburger > div {
+        transform: rotate(135deg);
+    }
+    
+    /* Turns line to X */
+    
+    .menu-wrap .toggler:checked + .hamburger > div:before,
+    .menu-wrap .toggler:checked + .hamburger > div:after {
+        top: 0px;
+        transform: rotate(90deg);
+    }
+    
+    .menu-wrap .toggler:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+    }
+    
+    .menu-wrap .toggler:checked ~ .menu {
+        visibility: visible;
+    }
+    
+    .menu-wrap .toggler:checked ~ .menu > div {
+        transform: scale(1);
+        transition-duration: var(--menu-speed);
+    }
+    
+    .menu-wrap .toggler:checked ~ .menu > div > div {
+        opacity: 1;
+        transition: opacity 0.4s ease 0.4s;
+    }
+    
+    .menu-wrap .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu-wrap .menu > div {
+        background: var(--overlay-color);
+        width: 200vw;
+        height: 100vh;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        /* border-radius: 50%; */
+    
+        transform: scale(0);
+        transition: all 0.4s ease;
+    }
+    
+    .menu-wrap .menu > div > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    
+    .menu-wrap .menu > div > div > ul > li {
+        list-style: none;
+        color: #20b6b6;
+        font-size: 1.5rem;
+        padding: 0rem;
+    }
+    
+    .menu-wrap .menu > div > div > ul > li > a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.4s ease;
+    }
+    
+   /*  .menu-wrap .menu > div > div > ul > li > a:hover {
+        color: var(--secondary-color);
+    } */
+
+}
+
+
+
+
+.colorclick {
+    color: #008080;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* crear movimiento que salta */
+
+/*@keyframes squareAnim {
+    0% {
+        transform: translateY(0.05rem);
+    }
+
+    20% {
+        transform: translateY(0.4rem);
+    }
+
+    50%,
+    60% {
+        transform: translateY(0.64rem);
+    }
+
+    62% {
+        transform: translateY(0.45rem);
+    }
+
+    80% {
+        transform: translateY(0.10rem);
+    }
+
+    100% {
+        transform: translateY(0.10rem);
+    
+    }
+}/*
+
+/* Container Skills */
+/*
+.container-skills {
+    width: 100%;
+    height: 40vh;
+    background-color: #008080;
+    margin-bottom: 2rem;
+}
+
+.landing {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.8)), url('../img/learncplusplus.jpg') no-repeat;
+    background-size: contain;
+    background-position: center top;
+    animation: landingAnim 4s forwards;
+    transition: background-size 0.5s ease;
+}
+
+.landing:hover {
+    background-size: 110%;
+    background-position: center;
+}
+
+@keyframes landingAnim {
+    0%,
+    50% {
+        clip-path: 	polygon(50% 0, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0, 30% 0);
+    }
+
+    100% {
+        clip-path: polygon(50% 4%, 70% 10%, 95% 0, 95% 87%, 5% 100%, 5% 15%, 31% 10%);
+        background-position: center bottom;
+    }
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color: #008080;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform-origin: top;
+    animation: bgAnim 2s forwards;
+}
+
+@keyframes bgAnim {
+    0%,
+    50% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(0);
+    }
+}
+*/
