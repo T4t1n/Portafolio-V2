@@ -501,6 +501,9 @@ h2 {
         color: var(--secondary-color);
     } */
 
+    #projects h2{
+        font-size: 1rem;
+    }
 }
 
 @media(min-width: 768px){
